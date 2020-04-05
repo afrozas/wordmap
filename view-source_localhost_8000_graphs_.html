@@ -3,15 +3,14 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
     body {
-        max-width: 95%;
+        max-width: 90%;
         margin: auto;
-        font-family: 'Montserrat', sans-serif;
     }
 
     #leftPane {
@@ -25,7 +24,7 @@
     }
 
     #rightPane {
-        min-width: 70%;
+        min-width: 75%;
         float: left;
         overflow: hidden;
         padding:1%;
@@ -37,7 +36,7 @@
         height: 95%;
         width: 100%;
         overflow: hidden;
-        scroll-behavior: u;
+        scroll-behavior: smooth;
     }
 
     #myInput {
@@ -93,20 +92,10 @@
         /* Add a hover effect to all links, except for headers */
     }
 
-    h1 {
-        background-color: rgb(4, 27, 131);
-        color: white;
-        font-family: 'Montserrat', sans-serif;
+    h3 {
+        background-color: royalblue;
+        text-decoration: white;
         font-weight: bold;
-        margin-top: 0;
-        background-clip: border-box;
-        text-align: center;
-    }
-
-    h4 {
-        padding: auto;
-        font-family: 'Montserrat', sans-serif;
-        text-align: center;
     }
 </style>
 <script>
@@ -133,9 +122,8 @@
 
 <body>
     <div id="leftPane">
-        <h1>word visualizations</h1>
-        <h4>Click on a word to see words closer in meaning.</h4>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+        <h1>Word Visualizations</h1>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a word..">
         <ul id="myUL">
             <li><a target="graphIFrame" href="graphs/aberrant/index.html">aberrant</a></li>
 
@@ -2407,7 +2395,7 @@
         </ul>
     </div>
     <div id="rightPane">
-        <iframe name="graphIFrame" src="" scrolling="no"></iframe> 
+        <iframe name="graphIFrame" src="">
     </div>
 </body>
 
