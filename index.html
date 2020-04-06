@@ -3,7 +3,8 @@
 <head>
     <link rel="icon" href="icon.jpeg" type="image/icon type">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>WordMap</title>
@@ -16,7 +17,7 @@
     }
 
     #leftPane {
-        
+
         max-width: 30%;
         border-right: lightgray 0.5em solid;
         padding-right: 2em;
@@ -29,16 +30,52 @@
         min-width: 70%;
         float: left;
         overflow: hidden;
-        padding:1%;
+        padding: 1%;
         position: relative;
     }
 
     #rightPane iframe {
         border: 0;
-        height: 95%;
+        height: 90%;
         width: 100%;
+        top: 0;
+        left: 0;
         overflow: hidden;
         scroll-behavior: u;
+    }
+
+    #rightPane label {
+        height: 5%;
+        bottom: 0;
+        padding: auto;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .labeltext {
+        float: left;
+        padding: auto;
+    }
+
+    .box {
+        display: inline;
+        height: 20px;
+        width: 20px;
+        border: 1px solid black;
+        float: left;
+        margin: 0 10px;
+    }
+
+    .green {
+    background-color: #32CD32;
+    }
+
+    .yellow {
+    background-color: #F4B400;
+    }
+
+    .blue {
+    background-color: #041b83;
     }
 
     #myInput {
@@ -2408,7 +2445,12 @@
         </ul>
     </div>
     <div id="rightPane">
-        <iframe name="graphIFrame" src="" scrolling="no"></iframe> 
+        <iframe name="graphIFrame" src="graphs/castigate/index.html" scrolling="no"></iframe>
+        <div id="label">
+            <div class='box yellow'></div><div class="labeltext">Current Word</div>
+            <div class='box blue'></div><div class="labeltext">Explorable Further</div>
+            <div class='box green'></div><div class="labeltext">Leaf Word</div>
+        </div>
     </div>
 </body>
 
