@@ -51,16 +51,12 @@ document.addEventListener("DOMContentLoaded", function(e) {
     }).attr("r", function(d) {
       return d.color == maincolor ? radius * 1.5 : radius;
     }).on("click", function(d) {
-      if (d.page) {
-        window.open(d.name + ".html");
-      }
+      window.open("../"+d.name+"/index.html", "graphIFrame");
     });
     node.append("text").text(function(d) {
       return splithyphen === 'true' ? d.name.split("_")[0] : d.name;
     }).on("click", function(d) {
-      if (d.page) {
-        window.open(d.name + ".html");
-      }
+        window.open("../"+d.name+"/index.html");
     }).attr("stroke", "#333").attr("dx", 12).attr("dy", ".35em").style("cursor", "default");
     nodesel.exit().remove();
     force.on("tick", function() {
@@ -96,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
       src = order[data[k]["source"]];
       tg = order[data[k]["target"]];
     } else {
-      datanodes.push({"name":data[k]["target"], color:"#DB4437", page:pages.indexOf(data[k]["target"]) > -1});
+      datanodes.push({"name":data[k]["target"], color:"#041b83", page:pages.indexOf(data[k]["target"], ) > -1, });
       order[key] = k;
     }
     if (data[k]["value"] > threshold) {
